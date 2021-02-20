@@ -15,4 +15,11 @@ def microservice():
 
         return jsonify({'tone_analysis': tone_analysis})
 
+        # tone_results = jsonify({'tone_analysis': tone_analysis})
+
+        # import new file for tone resources
+
+        # data = ToneResource(tone_results)
+        # return data
+
     return app
