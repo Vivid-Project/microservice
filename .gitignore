@@ -1,2 +1,2 @@
-/config.py
-/__pycache__
+/api/services/config.py
+/api/services/__pycache__
