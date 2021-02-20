@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from service import Service
+from tone_analyzer_service import ToneAnalyzerService
 
 app = Flask(__name__)
 
@@ -10,7 +10,7 @@ def get_tones():
 
     dream_text = str(request.data)
 
-    tone_analysis = Service.get_tones(dream_text)
+    tone_analysis = ToneAnalyzerService.get_tones(dream_text)
 
     return jsonify({'tone_analysis': tone_analysis})
 
