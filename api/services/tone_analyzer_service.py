@@ -1,6 +1,6 @@
 import json
-import config
 from ibm_watson import ToneAnalyzerV3
+from api.services.config import TONE_ANALYZER_API_KEY
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
 class ToneAnalyzerService:
@@ -9,7 +9,7 @@ class ToneAnalyzerService:
 
         # Authentication via IAM
         # We will want to hide our API KEY!!!!!
-        authenticator = IAMAuthenticator(config.TONE_ANALYZER_API_KEY)
+        authenticator = IAMAuthenticator(TONE_ANALYZER_API_KEY)
         service = ToneAnalyzerV3(
             version='2017-09-21',
             authenticator=authenticator)
