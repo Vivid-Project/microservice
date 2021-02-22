@@ -1,4 +1,3 @@
-import json
 from ibm_watson import ToneAnalyzerV3
 from api.services.config import TONE_ANALYZER_API_KEY
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
