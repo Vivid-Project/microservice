@@ -11,6 +11,5 @@ deploy:
   on:
     repo: tone-analyzer-microservice
     branch: master
-  skip_cleanup: 'true'
   run:
   - pip install -r requirements.txt
