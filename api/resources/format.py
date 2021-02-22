@@ -1,4 +1,3 @@
-import json
 from collections import Counter
 
 class Format:
@@ -39,3 +38,5 @@ class Format:
 
 
         # "Starlight. I will be chasing a starlight. Until the end of my life. I don't know if it's worth it anymore. Hold you in my arms. I just wanted to hold. You in my arms. My life. You electrify my life. Let's conspire to ignite. All the souls that would die just to feel alive"
+
+        # "Il suffit d'un geste innocent. Evidemment que c'est que ta faute. Y'aura jamais de bon moment. Ou peut être bien que c'est ma faute. Y'aura jamais de bon moment."
