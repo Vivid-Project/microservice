@@ -13,17 +13,18 @@ class ToneAnalyzerService:
         service = ToneAnalyzerV3(
             version='2017-09-21',
             authenticator=authenticator)
+            
         service.set_service_url('https://gateway.watsonplatform.net/tone-analyzer/api')
 
+        #
+        # tone_analyzer = ToneAnalyzerV3(
+        #     version='2017-09-21',
+        #     authenticator=authenticator
+        # )
 
-        tone_analyzer = ToneAnalyzerV3(
-            version='2017-09-21',
-            authenticator=authenticator
-        )
+        # tone_analyzer.set_service_url('https://gateway.watsonplatform.net/tone-analyzer/api')
 
-        tone_analyzer.set_service_url('https://gateway.watsonplatform.net/tone-analyzer/api')
-
-        tone_analysis = tone_analyzer.tone(
+        tone_analysis = service.tone(
             {'text': dream_text},
             content_type='application/json'
         ).get_result()
