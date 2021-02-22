@@ -1,5 +1,6 @@
 /api/services/config.py
 
+.pytest_cache
 api/__pycache__
 /api/services/__pycache__
 /api/resources/__pycache__
