@@ -8,21 +8,12 @@ class ToneAnalyzerService:
     def get_tones(self, dream_text):
 
         # Authentication via IAM
-        # We will want to hide our API KEY!!!!!
         authenticator = IAMAuthenticator(TONE_ANALYZER_API_KEY)
         service = ToneAnalyzerV3(
             version='2017-09-21',
             authenticator=authenticator)
-            
+
         service.set_service_url('https://gateway.watsonplatform.net/tone-analyzer/api')
-
-        #
-        # tone_analyzer = ToneAnalyzerV3(
-        #     version='2017-09-21',
-        #     authenticator=authenticator
-        # )
-
-        # tone_analyzer.set_service_url('https://gateway.watsonplatform.net/tone-analyzer/api')
 
         tone_analysis = service.tone(
             {'text': dream_text},
