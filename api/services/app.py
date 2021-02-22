@@ -1,4 +1,6 @@
+import json
 from flask import Flask, jsonify, request
+from api.resources.format import Format
 from api.services.tone_analyzer_service import ToneAnalyzerService
 
 def microservice():
@@ -13,13 +15,8 @@ def microservice():
 
         tone_analysis = ToneAnalyzerService.get_tones(dream_text)
 
-        return jsonify({'tone_analysis': tone_analysis})
+        tone_results = jsonify({'tone_analysis': tone_analysis}).json
 
-        # tone_results = jsonify({'tone_analysis': tone_analysis})
-
-        # import new file for tone resources
-
-        # data = ToneResource(tone_results)
-        # return data
+        return Format.format_tone_results(tone_results)
 
     return app
