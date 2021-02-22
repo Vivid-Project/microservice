@@ -17,4 +17,11 @@ class Format:
                     counter += 1
             return tone_names
 
+        def find_unique_tone_names(data):
+            unique_list = []
+            for x in data:
+                if x not in unique_list:
+                    unique_list.append(f'{x}')
+            return ", ".join(unique_list)
+
         
