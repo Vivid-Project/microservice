@@ -1,5 +1,5 @@
-/api/services/config.py
 
+.env
 coverage*
 .coverage
 .coveragerc
