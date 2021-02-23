@@ -4,7 +4,7 @@ python:
 install:
 - pip install -r requirements.txt
 script:
-- - echo "skipping tests"
+- python -m pytest tests
 deploy:
   provider: heroku
   api_key:
