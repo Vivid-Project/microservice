@@ -1,5 +1,9 @@
 /api/services/config.py
 
+coverage*
+.coverage
+.coveragerc
+
 __pycache__
 .pytest_cache
 api/__pycache__
