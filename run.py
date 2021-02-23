@@ -1,4 +1,4 @@
-from api.services.app import microservice
+from api import microservice
 
 app = microservice()
 
