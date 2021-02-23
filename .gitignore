@@ -1,2 +1,11 @@
-/config.py
-/__pycache__
+/api/services/config.py
+
+coverage*
+.coverage
+.coveragerc
+
+__pycache__
+.pytest_cache
+api/__pycache__
+/api/services/__pycache__
+/api/resources/__pycache__

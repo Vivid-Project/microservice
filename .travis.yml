@@ -1,0 +1,17 @@
+language: python
+python:
+- '3.9.1'
+install:
+- pip install -r requirements.txt
+script:
+- - echo "skipping tests"
+deploy:
+  provider: heroku
+  api_key:
+    secure: LEpcyUKLlTPDARF5n7TgrcM4VHqEzuBm80VuejZFNQi3qz1d3TLURJBCrz6L5g/8YpEpI/5EaNPJfPcnDqBKOhREEpNtohITVfd+KYExZPeBD/xWcadD7cakF35FwG4oRAQQLiIPrlL9RWt65TNWu0l3JTJIeqvbGZQSLMjO4s9ICIhTO4rtu6V4Ntwpk8rxVlM9qIJzhcssepB1aBZlmiXi8m0dm24vzVXwlRbsDDXDxcN/la0EURVP3OYN/G836f8JSKvzoOL34n1gfS4H8UGn0la6Y45XK9jmQMU/8yY83eoJvt3U34x8fUb8Yvja3p8x4ixWthF7BDa2Dz3J8bgQtHNjv9nCupE3fnhSC4cZStN/wmBpxCKoVMKE4QYPFMjDoxViu8CvQpDRi+Oh5wbMgeuOCR+jLDMMrfCypStZRJgQ40fCpGDQTgCticCtDkpHisHZRlrAJO1WqDw/72B7DtqNyTYgslE9M5cCp+/jW1APXWrgG5mlfDqODK2MD7nRZ3vrUPBEm0E1PoFUGfdDwYyCQBdE5EZCJk9oMosK2n0neIc9ZI6dkqlFoxlL0+EGFhrqwf+lEBAqY73iCYcfRRe8HPj2xg9LGH3dyApuxN4zCVHM6Pv1PAhVdN083yRBsALtfBY6A7YTmAEZx9uQsCArgwN96AZLkzHAeik=
+  app: microservice
+  on:
+    repo: tone-analyzer-microservice
+    branch: master
+  run:
+  - pip install -r requirements.txt
