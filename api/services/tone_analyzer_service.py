@@ -17,7 +17,8 @@ class ToneAnalyzerService:
 
         tone_analysis = service.tone(
             {'text': dream_text},
-            content_type='application/json'
+            content_type='application/json',
+            content_language='fr' or 'en'
         ).get_result()
 
         return tone_analysis
