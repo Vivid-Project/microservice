@@ -107,7 +107,7 @@ To view a sample response, after *at least* completing the configuration steps u
 </details></br>
 
 
-Alternatively, use this collection! [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/9ca6f197c67ca669a7be)
+Alternatively, you can use this collection, one request is set up to run from our deployed heroku application for this microservice, the other for if you are running locally! [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/9ca6f197c67ca669a7be)
 
 
   This microservice only needs to be given a raw text body in the request to generate a response. It should be noted that for this microservice to run optimally, this microservice currently only accepts English, with an extension to add French as well.
