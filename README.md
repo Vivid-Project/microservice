@@ -68,6 +68,13 @@ To view all the repositories associated with Vivid, please visit [Vivid-Project]
 
 To properly use this application you will need to set up and configure three repositories. Follow the *Configuration* directions in each repository to get Vivd running locally! Alternatively, check out the production application [here](put front end heroku here)!!!
 
+### Prerequisites
+These setup instructions are for Mac OS.
+
+##### Install Necessary Programs
+Be sure your machine has `Python` or `Python3` installed.
+[Postman](https://www.postman.com/) is required for sending requests and verifying API responses from the IBM Watson Tone Analyzer API.
+
 ### Configuration
 **Setting Up this Microservice**
 1. Clone this repo ```git clone git@github.com:Vivid-Project/microservice.git```
