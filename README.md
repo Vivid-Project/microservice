@@ -78,7 +78,7 @@ To properly use this application you will need to set up and configure three rep
 
 4. Go [here](https://cloud.ibm.com/apidocs/tone-analyzer?code=python) and sign up for a free api key
 
-5. Run 'touch env.' and in this file add your api key in this format: ```TONE_ANALYZER_API_KEY = 'your-key-here'```
+5. Run `touch .env` and in this file add your api key in this format: ```TONE_ANALYZER_API_KEY = 'your-key-here'```
 
 6. At this point, please visit [Configuration Part II](https://https://github.com/Vivid-Project/frontend#configuration) to get the full Vivid Application up and running locally
 
@@ -87,7 +87,7 @@ To view a sample response, after *at least* completing the configuration steps u
 
 1. In the command line run ```python run.py```  This will spin up your local server.
 
-2. Open up Postman and using a ```POST``` to localhost ``` http://127.0.0.1:5000/microservice/api/v1.0/tones```, include a raw text body and you will see a response similar to this:
+2. Open up Postman and using a ```POST``` to localhost ``` http://127.0.0.1:5000/microservice/api/v1.0/tones```, include a raw text body including any plain text to analyze and you will see a response similar to this:
 
 <details>
 
