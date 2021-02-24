@@ -72,7 +72,7 @@ To properly use this application you will need to set up and configure three rep
 These setup instructions are for Mac OS.
 
 ##### Install Necessary Programs
-Be sure your machine has `Python` or `Python3` installed.
+Be sure your machine has `Python` installed.
 [Postman](https://www.postman.com/) is required for sending requests and verifying API responses from the IBM Watson Tone Analyzer API.
 
 ### Configuration
