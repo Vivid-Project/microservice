@@ -7,7 +7,7 @@ from api.services.tone_analyzer_service import ToneAnalyzerService
 class ToneAnalyzerServiceTest(unittest.TestCase):
     def test_get_tone(self):
         dream_text = "It's too bad. When did it get cool to be so sad? We're spinnin' backwards, did we all go mad? It's too bad. When did it get cool to be so sad? We're spinnin' backwards, did we all go mad? It's too bad. When did it get cool to be so sad? We're spinnin' backwards, did we all go mad?"
-        dream_text_2 = "Starlight. I will be chasing a starlight. Until the end of my life. I don't know if it's worth it anymore. Hold you in my arms. I just wanted to hold. You in my arms. My life. You electrify my life. Let's conspire to ignite. All the souls that would die just to feel alive"
+        dream_text_2 = "Je m'baladais sur l'avenue le cœur ouvert à l'inconnu. J'avais envie de dire bonjour à n'importe qui. N'importe qui et ce fut toi, je t'ai dit n'importe quoi. Il suffisait de te parler, pour t'apprivoiser."
 
         tone_analysis = ToneAnalyzerService.get_tones(dream_text)
 

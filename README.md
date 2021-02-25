@@ -117,7 +117,7 @@ To view a sample response, after *at least* completing the configuration steps u
 Alternatively, you can use this collection, one request is set up to run from our deployed heroku application for this microservice, the other for if you are running locally! [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/9ca6f197c67ca669a7be)
 
 
-  This microservice only needs to be given a raw text body in the request to generate a response. It should be noted that for this microservice to run optimally, this microservice currently only accepts English, with an extension to add French as well.
+  This microservice only needs to be given a raw text body in the request to generate a response. It should be noted that for this microservice to run optimally, this microservice currently only accepts English or French. It is recommended that you use one or the other and not both if wanting to achieve the highest accuracy from the tone analyzer api. 
 
 ### Testing
 
