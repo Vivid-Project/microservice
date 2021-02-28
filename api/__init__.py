@@ -14,8 +14,9 @@ def microservice():
 
         tone_analysis = ToneAnalyzerService.get_tones(dream_text)
 
-        # Could be refactored
         tone_results = jsonify({'tone_analysis': tone_analysis}).json
+
+        # print(json.dumps(tone_analysis, indent=2))
 
         return Format.format_tone_results(tone_results)
 
