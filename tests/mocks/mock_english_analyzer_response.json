@@ -1,0 +1,56 @@
+{
+  "document_tone": {
+    "tones": [
+      {
+        "score": 0.608806,
+        "tone_id": "sadness",
+        "tone_name": "Sadness"
+      },
+      {
+        "score": 0.927401,
+        "tone_id": "confident",
+        "tone_name": "Confident"
+      }
+    ]
+  },
+  "sentences_tone": [
+    {
+      "sentence_id": 0,
+      "text": "b\"It's too bad.",
+      "tones": [
+        {
+          "score": 0.56093,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        }
+      ]
+    },
+    {
+      "sentence_id": 1,
+      "text": "When did it get cool to be so sad?",
+      "tones": [
+        {
+          "score": 0.637866,
+          "tone_id": "sadness",
+          "tone_name": "Sadness"
+        }
+      ]
+    },
+    {
+      "sentence_id": 2,
+      "text": "We're spinnin' backwards, did we all go mad?\"",
+      "tones": [
+        {
+          "score": 0.511441,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        },
+        {
+          "score": 0.898327,
+          "tone_id": "confident",
+          "tone_name": "Confident"
+        }
+      ]
+    }
+  ]
+}
