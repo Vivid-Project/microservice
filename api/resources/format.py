@@ -15,7 +15,10 @@ class Format:
                     if not data[counter]["tones"]:
                         counter += 1 # pragma: no cover
                     else:
-                        tone_names.append(data[counter]["tones"][0]["tone_name"])
+                        tone_in_sentence_counter = 0
+                        while tone_in_sentence_counter != len(data[counter]["tones"]):
+                            tone_names.append(data[counter]["tones"][tone_in_sentence_counter]["tone_name"])
+                            tone_in_sentence_counter += 1
                         counter += 1
                 return tone_names
 
