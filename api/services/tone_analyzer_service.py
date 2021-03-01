@@ -29,11 +29,11 @@ class ToneAnalyzerService:
 
         tone_input = ToneInput(dream_text)
 
-        tone = service.tone(
+        tone_analysis = service.tone(
             tone_input=tone_input,
             content_type="application/json",
             content_language=language,
             accept_language=language,
         ).get_result()
 
-        return tone
+        return tone_analysis
