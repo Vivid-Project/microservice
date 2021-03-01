@@ -21,5 +21,6 @@ class ToneAnalyzerServiceTest(unittest.TestCase):
         self.assertIsNotNone(tone_analysis_2["document_tone"])
         self.assertIsNotNone(tone_analysis_2["document_tone"]["tones"])
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
