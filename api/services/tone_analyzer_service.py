@@ -1,4 +1,5 @@
 import os
+import langid
 from ibm_watson import ToneAnalyzerV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
@@ -15,10 +16,20 @@ class ToneAnalyzerService:
 
         service.set_service_url('https://gateway.watsonplatform.net/tone-analyzer/api')
 
+        def french_or_english(dream_text):
+            lang = langid.classify(dream_text)
+            if lang[0] == 'fr':
+                return 'fr'
+            else:
+                return 'en'
+
+        language = french_or_english(dream_text)
+
         tone_analysis = service.tone(
             {'text': dream_text},
             content_type='application/json',
-            content_language='fr' or 'en'
+            content_language='fr' or 'en',
+            accept_language=language
         ).get_result()
 
         return tone_analysis
