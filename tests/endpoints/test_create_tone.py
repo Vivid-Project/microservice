@@ -6,7 +6,7 @@ from api import microservice
 
 class CreateToneTest(unittest.TestCase):
     def setUp(self):
-        dream_text = "It's too bad. When did it get cool to be so sad? We're spinnin' backwards, did we all go mad? It's too bad. When did it get cool to be so sad? We're spinnin' backwards, did we all go mad? It's too bad. When did it get cool to be so sad? We're spinnin' backwards, did we all go mad?"
+        dream_text = "It's too bad. When did it get cool to be so sad? We're spinnin' backwards, did we all go mad?"
 
         self.app = microservice()
         self.client = self.app.test_client()
