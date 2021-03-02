@@ -37,7 +37,7 @@
   * [Prerequisites](#prerequisites)
   * [Configuration](#configuration)
   * [Testing](#testing)
-  * [Usage](#usage)
+  * [Endpoints](#endpoints)
 * [Contributing](#contributing)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
@@ -87,37 +87,78 @@ Be sure your machine has `Python` installed.
 
 5. Run `touch .env` and in this file add your api key in this format: ```TONE_ANALYZER_API_KEY = 'your-key-here'```
 
-6. At this point, please visit [Configuration Part II](https://https://github.com/Vivid-Project/frontend#configuration) to get the full Vivid Application up and running locally
 
-### Usage
-To view a sample response, after *at least* completing the configuration steps up to and including \#5,  
+### Endpoints
+##### Quick Start
+This microservice has a single end point. To quickly use this endpoint please direct requests to https://tone-analyzer-microservice.herokuapp.com/microservice/api/v1.0/tones (our deployed application).
 
-1. In the command line run ```python run.py```  This will spin up your local server.
+It only needs to be given a raw text body in the request to generate a response. Punctuation is important, as this service will analyze the given input sentence by sentence. Alternatively, ensure each new sentence starts on a new line.
 
-2. Open up Postman and using a ```POST``` to localhost ``` http://127.0.0.1:5000/microservice/api/v1.0/tones```, include a raw text body including any plain text to analyze and you will see a response similar to this:
+It should be noted that for this microservice to run optimally, it currently only accepts English or French. It is recommended that you use one or the other and not both if wanting to achieve the highest accuracy from the tone analyzer api. </br>
+
+
+This collection has been set up for you. One request is set up to run from our deployed heroku application, the other for if you are running locally!
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/9ca6f197c67ca669a7be)</br></br>
+
+**POST /microservice/api/v1.0/tones**
+</br></br>
+
+
+Example raw text # 1:
+
+<details></br>
+There is no pain, you are receding.
+A distant ship, smoke on the horizon.
+You are only coming through in waves.
+Your lips move, but I can't hear what you're saying.
+When I was a child, I had a fever.
+My hands felt just like two balloons.
+Now I've got that feeling once again.
+I can't explain, you would not understand.
+This is not how I am.
+</details></br></br></br>
+
+
+Example raw text # 2(No Punctuation):
+
+<details></br>
+There is no pain, you are receding</br>
+A distant ship, smoke on the horizon</br>
+You are only coming through in waves</br>
+Your lips move, but I can't hear what you're saying</br>
+When I was a child, I had a fever</br>
+My hands felt just like two balloons</br>
+Now I've got that feeling once again</br>
+I can't explain, you would not understand</br>
+This is not how I am
+</details></br></br></br>
+
+Example Response:
 
 <details>
 
-  ```
-  {
+```ruby
+{
     "tone_strength": {
-        "Analytical": 1,
-        "Anger": 1,
-        "Joy": 2,
-        "Sadness": 2,
+        "Analytical": 2,
+        "Joy": 1,
         "Tentative": 1
     },
-    "unique_tones": "Joy, Sadness, Tentative, Anger, Analytical"
+    "unique_tones": "Analytical, Joy, Tentative"
 }
-  ```
-
+```
 </details></br>
 
 
-Alternatively, you can use this collection, one request is set up to run from our deployed heroku application for this microservice, the other for if you are running locally! [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/9ca6f197c67ca669a7be)
+##### For local use
+After completing the configuration steps,  
+
+1. In the command line run ```python run.py```  This will spin up your local server.
+
+2. Open up Postman and using a ```POST``` to localhost ``` http://127.0.0.1:5000/microservice/api/v1.0/tones```, include a raw text body and you are ready to go!
 
 
-  This microservice only needs to be given a raw text body in the request to generate a response. It should be noted that for this microservice to run optimally, this microservice currently only accepts English or French. It is recommended that you use one or the other and not both if wanting to achieve the highest accuracy from the tone analyzer api. 
 
 ### Testing
 
