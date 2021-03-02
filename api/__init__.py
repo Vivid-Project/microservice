@@ -1,5 +1,5 @@
 import json
-from flask import Flask, jsonify, request
+from flask import Flask, render_template, jsonify, request
 from api.resources.format import Format
 from api.services.tone_analyzer_service import ToneAnalyzerService
 
@@ -17,5 +17,9 @@ def microservice():
         tone_results = jsonify({'tone_analysis': tone_analysis}).json
 
         return Format.format_tone_results(tone_results)
+
+    @app.route('/')
+    def home_page():
+        return render_template('index.html')
 
     return app
