@@ -1,0 +1,176 @@
+<h1 id="tone-analyzer-microservice">Tone Analyzer Microservice</h1>
+<!-- PROJECT SHIELDS -->
+<p>
+  <a href="https://github.com/Vivid-Project/microservice/stargazers"><img src="https://img.shields.io/github/stars/Vivid-Project/microservice" alt="Stars"></a>
+  <a href="https://github.com/Vivid-Project/microservice/network/members"><img src="https://img.shields.io/github/forks/Vivid-Project/microservice" alt="Forks"></a>
+  <a href="https://github.com/Vivid-Project/microservice/issues"><img src="https://img.shields.io/github/issues/Vivid-Project/microservice" alt="Issues"></a>
+  <a href="https://github.com/Vivid-Project/microservice/graphs/contributors"><img src="https://img.shields.io/github/contributors/Vivid-Project/microservice" alt="Contributors"></a>
+  <a href="https://travis-ci.com/github/Vivid-Project/microservice"><img src="https://travis-ci.com/travis-ci/travis-web.svg?branch=master" alt="Build Status"></a>
+</p>
+  <h3 align="center">Tone Analyzer Microservice</h3>
+
+  <p align="center">
+    This is a microservice that was built to provide a tone analysis for a user&#39;s dream journal entry.
+    <br />
+    <a href="https://github.com/Vivid-Project/microservice"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <!-- for adding a demo video
+    <a href="Add our video link here">View Demo</a>  · -->
+    ·
+    <a href="https://https://github.com/Vivid-Project/microservice/issues">Report Bug</a>
+    ·
+    <a href="https://https://github.com/Vivid-Project/microservice/issues">Request Feature</a>
+  </p>
+</p>
+
+
+</br>
+<!-- TABLE OF CONTENTS -->
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#about-the-project">About the Project</a><ul>
+<li><a href="#built-with">Built With</a></li>
+</ul>
+</li>
+<li><a href="#getting-started">Getting Started</a><ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#endpoints">Endpoints</a></li>
+</ul>
+</li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#acknowledgements">Acknowledgements</a></li>
+</ul>
+
+</br>
+<!-- ABOUT THE PROJECT -->
+<h2 id="about-the-project">About The Project</h2>
+<p>Please visit the <a href="https://https://github.com/Vivid-Project/frontend">frontend</a> repository of this project and check out the readme there for a more in depth look at this project!</p>
+<p>This microservice was built to provide tone analysis data for a user&#39;s dream journal entry. This microservice works in tandem with the <a href="https://github.com/Vivid-Project/backend">Vivid-Project backend</a>. When a user saves a dream journal entry it is sent to the Vivid-Project backend where that entry is stored in the database. From there, a request will be issued to this microservice containing a raw text body holding that journal entry. This microservice will analyze this text, sentence by sentence, and will return a &quot;tone strength&quot;(a count of how many times a given tone was present in the analysis), as well as &quot;unique tones&quot;(a string containing each unique tone name for this request).  Please visit the usage section of this document for more information on what that request / response looks like.</p>
+<p>This micro services uses the IBM Tone Analyzer API.  Read the API documentation <a href="https://cloud.ibm.com/apidocs/tone-analyzer?code=python">here</a></p>
+<p>To view all the repositories associated with Vivid, please visit <a href="https://github.com/Vivid-Project">Vivid-Project</a></p>
+<h3 id="built-with">Built With</h3>
+<ul>
+<li><a href="https://github.com/python">Python</a></li>
+<li><a href="https://github.com/pallets/flask">Flask</a></li>
+</ul>
+
+</br>
+<!-- GETTING STARTED -->
+<h2 id="getting-started">Getting Started</h2>
+<p>To properly use this application you will need to set up and configure three repositories. Follow the <em>Configuration</em> directions in each repository to get Vivid running locally! Alternatively, check out the production application <a href="put front end heroku here">here</a>!!!</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>These setup instructions are for Mac OS.</p>
+<h5 id="install-necessary-programs">Install Necessary Programs</h5>
+<p>Be sure your machine has <code>Python</code> installed.
+<a href="https://www.postman.com/">Postman</a> is required for sending requests and verifying API responses from the IBM Watson Tone Analyzer API.</p>
+<h3 id="configuration">Configuration</h3>
+<p><strong>Setting Up this Microservice</strong></p>
+<ol>
+<li><p>Clone this repo <code>git clone git@github.com:Vivid-Project/microservice.git</code></p>
+</li>
+<li><p>Enter the directory it was cloned into <code>cd microservice</code></p>
+</li>
+<li><p>Run <code>pip install -r requirements.txt</code> to install dependencies</p>
+</li>
+<li><p>Go <a href="https://cloud.ibm.com/apidocs/tone-analyzer?code=python">here</a> and sign up for a free api key</p>
+</li>
+<li><p>Run <code>touch .env</code> and in this file add your api key in this format: <code>TONE_ANALYZER_API_KEY = &#39;your-key-here&#39;</code></p>
+</li>
+</ol>
+
+</br>
+<h3 id="endpoints">Endpoints</h3>
+<h5 id="quick-start">Quick Start</h5>
+<p>This microservice has a single end point. To quickly use this endpoint please direct requests to <a href="https://tone-analyzer-microservice.herokuapp.com/microservice/api/v1.0/tones">https://tone-analyzer-microservice.herokuapp.com/microservice/api/v1.0/tones</a> (our deployed application).</p>
+<p>It only needs to be given a raw text body in the request to generate a response. Punctuation is important, as this service will analyze the given input sentence by sentence. Alternatively, ensure each new sentence starts on a new line.</p>
+<p>It should be noted that for this microservice to run optimally, it currently only accepts English or French. It is recommended that you use one or the other and not both if wanting to achieve the highest accuracy from the tone analyzer api. </br></p>
+<p>This collection has been set up for you. One request is set up to run from our deployed heroku application, the other for if you are running locally!</p></br>
+<p><a href="https://app.getpostman.com/run-collection/9ca6f197c67ca669a7be"><img src="https://run.pstmn.io/button.svg" alt="Run in Postman"></a></br></br></p>
+<p><strong>POST /microservice/api/v1.0/tones</strong>
+</br></br></p>
+<p>Example raw text # 1:</p>
+<p><details></br>
+There is no pain, you are receding.
+A distant ship, smoke on the horizon.
+You are only coming through in waves.
+Your lips move, but I can&#39;t hear what you&#39;re saying.
+When I was a child, I had a fever.
+My hands felt just like two balloons.
+Now I&#39;ve got that feeling once again.
+I can&#39;t explain, you would not understand.
+This is not how I am.
+</details></br></br></br></p>
+<p>Example raw text # 2(No Punctuation):</p>
+<p><details></br>
+There is no pain, you are receding</br>
+A distant ship, smoke on the horizon</br>
+You are only coming through in waves</br>
+Your lips move, but I can&#39;t hear what you&#39;re saying</br>
+When I was a child, I had a fever</br>
+My hands felt just like two balloons</br>
+Now I&#39;ve got that feeling once again</br>
+I can&#39;t explain, you would not understand</br>
+This is not how I am
+</details></br></br></br></p>
+
+<p>Example Response:</p>
+<details>
+
+<pre><code class="lang-ruby">{
+    <span class="hljs-attr">"tone_strength"</span>: {
+        <span class="hljs-attr">"Analytical"</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-attr">"Joy"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"Tentative"</span>: <span class="hljs-number">1</span>
+    },
+    <span class="hljs-attr">"unique_tones"</span>: <span class="hljs-string">"Analytical, Joy, Tentative"</span>
+}
+</code></pre>
+<p></details></br></p>
+<h4 id="for-local-use">For local use</h4>
+<p>After completing the configuration steps,  </p>
+<ol>
+<li><p>In the command line run <code>python run.py</code>  This will spin up your local server.</p>
+</li>
+<li><p>Open up Postman and using a <code>POST</code> to localhost <code>http://127.0.0.1:5000/microservice/api/v1.0/tones</code>, include a raw text body and you are ready to go!</p>
+</li>
+</ol>
+
+</br></br><h3 id="testing">Testing</h3>
+<p><a href="https://github.com/pytest-dev/pytest">Pytest</a> was used for the testing of this microservice.</p>
+<p>To view the test coverage;</p>
+<p>Once inside your terminal within the microservice directory run the following command.</p>
+<pre><code><span class="hljs-attribute">coverage report</span>
+</code></pre><p>This will show you the quick summary of the test coverage in this application.</p>
+<p>Alternatively, you can run <code>coverage html</code> to generate a folder containing a more detailed analysis of the coverage in this repository. Simply navigate to the full path of the file in your browser to view these reports.</p>
+
+</br>
+<!-- ROADMAP -->
+<h2 id="roadmap">Roadmap</h2>
+<p>See <a href="https://github.com/Vivid-Project/microservice/issues">Open Issues</a> or visit our <a href="https://github.com/orgs/Vivid-Project/projects/1">Project Board</a> for a list of proposed features, known issues, and project extensions.</p>
+
+</br>
+<!-- CONTRIBUTING -->
+<h2 id="contributing">Contributing</h2>
+<p>Contributions are what make this community such an amazing and fun place to learn, grow, and create! Any contributions you make are <strong>greatly appreciated</strong>.</p>
+<ol>
+<li>Fork the Project</li>
+<li>Create your Feature Branch <code>git checkout -b feature/NewGreatFeature</code></li>
+<li>Commit your Changes <code>git commit -m &#39;Add some NewGreatFeature&#39;</code></li>
+<li>Push to the Branch <code>git push origin feature/NewGreatFeature</code></li>
+<li>Open a new Pull Request!</li>
+</ol>
+
+</br>
+<!-- CONTACT -->
+<h2 id="contact">Contact</h2>
+<p>Amanda Davidson &nbsp;- <a href="https://www.linkedin.com/in/amanda-davidson02/"><img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&amp;logo=linkedin&amp;colorB=555" alt="LinkedIn"></a> - <a href="https://github.com/ADavidson02">GitHub</a> - <a href="https://alumni.turing.io/alumni/amanda-davidson">Turing Alum Profile</a></p>
+<p>Shawn Truesdale &nbsp;&nbsp;&nbsp;- <a href="https://www.linkedin.com/in/shawntruesdale/"><img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&amp;logo=linkedin&amp;colorB=555" alt="LinkedIn"></a> - <a href="https://github.com/Shawntru">GitHub</a></p>
+<p>Jonathan Wilson &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://www.linkedin.com/in/jonathan--wilson/"><img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&amp;logo=linkedin&amp;colorB=555" alt="LinkedIn"></a> - <a href="https://github.com/Jonathan-M-Wilson">GitHub</a> - <a href="https://alumni.turing.io/alumni/jonathan-wilson">Turing Alum Profile</a></p>
+<p>Zach Stearns &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://www.linkedin.com/in/zach-stearns/"><img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&amp;logo=linkedin&amp;colorB=555" alt="LinkedIn"></a> - <a href="https://github.com/Stearnzy">GitHub</a> - <a href="https://alumni.turing.io/alumni/zach-stearns">Turing Alum Profile</a></p>
+<p>Aidan Murray &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://www.linkedin.com/in/aidan-murray-teknoserval/"><img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&amp;logo=linkedin&amp;colorB=555" alt="LinkedIn"></a> - <a href="https://github.com/TeknoServal">GitHub</a></p>
+<p>Taylor Phillips &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://www.linkedin.com/in/taphill/"><img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&amp;logo=linkedin&amp;colorB=555" alt="LinkedIn"></a> - <a href="https://github.com/taphill">GitHub</a> - <a href="https://alumni.turing.io/alumni/taylor-phillips">Turing Alum Profile</a></p>
+<p>Project Link: <a href="https://github.com/Vivid-Project">Vivid</a></p>
