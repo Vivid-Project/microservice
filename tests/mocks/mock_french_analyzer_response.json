@@ -1,0 +1,35 @@
+{
+  "document_tone": {
+    "tones": [
+      {
+        "score": 0.705551,
+        "tone_id": "joy",
+        "tone_name": "Joy"
+      }
+    ]
+  },
+  "sentences_tone": [
+    {
+      "sentence_id": 0,
+      "text": "b\"Je m'baladais sur l'avenue le c\\xc5\\x93ur ouvert \\xc3\\xa0 l'inconnu.",
+      "tones": [
+        {
+          "score": 0.519326,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        }
+      ]
+    },
+    {
+      "sentence_id": 1,
+      "text": "J'avais envie de dire bonjour \\xc3\\xa0 n'importe qui.\"",
+      "tones": [
+        {
+          "score": 0.689961,
+          "tone_id": "joy",
+          "tone_name": "Joy"
+        }
+      ]
+    }
+  ]
+}
