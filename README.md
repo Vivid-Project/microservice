@@ -25,7 +25,7 @@ View on [Heroku!](https://tone-analyzer-microservice.herokuapp.com/)
     ·
     <a href="https://https://github.com/Vivid-Project/microservice/issues">Request Feature</a>
   </p>
-</p>
+</p></br>
 
 
 
@@ -44,7 +44,7 @@ View on [Heroku!](https://tone-analyzer-microservice.herokuapp.com/)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
-
+</br></br>
 
 
 <!-- ABOUT THE PROJECT -->
@@ -57,25 +57,28 @@ This microservice was built to provide tone analysis data for a user's dream jou
 This micro services uses the IBM Tone Analyzer API.  Read the API documentation [here](https://cloud.ibm.com/apidocs/tone-analyzer?code=python)
 
 To view all the repositories associated with Vivid, please visit [Vivid-Project](https://github.com/Vivid-Project)
+</br>
 
 ### Built With
 
 
 * [Python](https://github.com/python)
 * [Flask](https://github.com/pallets/flask)
-
+</br>
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
 To properly use this application you will need to set up and configure three repositories. Follow the *Configuration* directions in each repository to get Vivd running locally! Alternatively, check out the production application [here](put front end heroku here)!!!
+</br>
 
 ### Prerequisites
 These setup instructions are for Mac OS.
 
-##### Install Necessary Programs
+#### Install Necessary Programs
 Be sure your machine has `Python` installed.
 [Postman](https://www.postman.com/) is required for sending requests and verifying API responses from the IBM Watson Tone Analyzer API.
+</br>
 
 ### Configuration
 **Setting Up this Microservice**
@@ -88,10 +91,11 @@ Be sure your machine has `Python` installed.
 4. Go [here](https://cloud.ibm.com/apidocs/tone-analyzer?code=python) and sign up for a free api key
 
 5. Run `touch .env` and in this file add your api key in this format: ```TONE_ANALYZER_API_KEY = 'your-key-here'```
+</br>
 
 
 ### Endpoints
-##### Quick Start
+#### Quick Start
 This microservice has a single end point. To quickly use this endpoint please direct requests to https://tone-analyzer-microservice.herokuapp.com/microservice/api/v1.0/tones (our deployed application).
 
 It only needs to be given a raw text body in the request to generate a response. Punctuation is important, as this service will analyze the given input sentence by sentence. Alternatively, ensure each new sentence starts on a new line.
@@ -159,7 +163,7 @@ After completing the configuration steps,
 1. In the command line run ```python run.py```  This will spin up your local server.
 
 2. Open up Postman and using a ```POST``` to localhost ``` http://127.0.0.1:5000/microservice/api/v1.0/tones```, include a raw text body and you are ready to go!
-
+</br>
 
 
 ### Testing
@@ -177,12 +181,14 @@ This will show you the quick summary of the test coverage in this application.
 
 Alternatively, you can run ```coverage html``` to generate a folder containing a more detailed analysis of the coverage in this repository. Simply navigate to the full path of the file in your browser to view these reports.
 
+</br>
+
 <!-- ROADMAP -->
 ## Roadmap
 
 See [Open Issues](https://github.com/Vivid-Project/microservice/issues) or visit our [Project Board](https://github.com/orgs/Vivid-Project/projects/1) for a list of proposed features, known issues, and project extensions.
 
-
+</br>
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -194,7 +200,7 @@ Contributions are what make this community such an amazing and fun place to lear
 4. Push to the Branch ```git push origin feature/NewGreatFeature```
 5. Open a new Pull Request!
 
-
+</br>
 <!-- CONTACT -->
 ## Contact
 
