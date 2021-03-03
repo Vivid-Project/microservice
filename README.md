@@ -49,7 +49,7 @@ View on [Heroku!](https://tone-analyzer-microservice.herokuapp.com/)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Please visit the [frontend](https://https://github.com/Vivid-Project/frontend) repository of this project and check out the readme there for a more in depth look at this project!
+Please visit the [frontend](https://github.com/Vivid-Project/frontend) repository of this project and check out the readme there for a more in depth look at this project!
 
 This microservice was built to provide tone analysis data for a user's dream journal entry. This microservice works in tandem with the [Vivid-Project backend](https://github.com/Vivid-Project/backend). When a user saves a dream journal entry it is sent to the Vivid-Project backend where that entry is stored in the database. From there, a request will be issued to this microservice containing a raw text body holding that journal entry. This microservice will analyze this text, sentence by sentence, and will return a "tone strength"(a count of how many times a given tone was present in the analysis), as well as "unique tones"(a string containing each unique tone name for this request).  Please visit the usage section of this document for more information on what that request / response looks like.
 
