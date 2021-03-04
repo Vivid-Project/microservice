@@ -189,6 +189,7 @@ Alternatively, you can run ```coverage html``` to generate a folder containing a
 See [Open Issues](https://github.com/Vivid-Project/microservice/issues) or visit our [Project Board](https://github.com/orgs/Vivid-Project/projects/1) for a list of proposed features, known issues, and project extensions.
 
 </br>
+
 <!-- CONTRIBUTING -->
 ## Contributing
 
