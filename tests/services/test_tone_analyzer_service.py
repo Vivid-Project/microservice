@@ -1,8 +1,5 @@
 import unittest
 
-from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
-from ibm_watson import ToneAnalyzerV3
-
 from api.services.tone_analyzer_service import ToneAnalyzerService
 
 
@@ -36,6 +33,7 @@ class ToneAnalyzerServiceTest(unittest.TestCase):
         self.assertIsNotNone(tone_analysis)
         self.assertIsNotNone(tone_analysis["document_tone"])
         self.assertIsNotNone(tone_analysis["document_tone"]["tones"])
+
 
 if __name__ == '__main__':
     unittest.main()
