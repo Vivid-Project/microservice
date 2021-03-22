@@ -1,5 +1,3 @@
-import json
-
 from flask import Flask, jsonify, render_template, request
 
 from api.resources import format
