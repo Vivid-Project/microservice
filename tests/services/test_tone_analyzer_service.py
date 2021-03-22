@@ -1,7 +1,10 @@
 import unittest
-from ibm_watson import ToneAnalyzerV3
+
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+from ibm_watson import ToneAnalyzerV3
+
 from api.services.tone_analyzer_service import ToneAnalyzerService
+
 
 class ToneAnalyzerServiceTest(unittest.TestCase):
     def test_get_english_tone(self):

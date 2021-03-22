@@ -1,7 +1,10 @@
 import json
-from flask import Flask, render_template, jsonify, request
+
+from flask import Flask, jsonify, render_template, request
+
 from api.resources import format
 from api.services.tone_analyzer_service import ToneAnalyzerService
+
 
 def microservice():
     app = Flask(__name__)
